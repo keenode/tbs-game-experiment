@@ -1,0 +1,50 @@
+/** --------------------------------------------------------
+    partials/_header.scss
+    --------------------------------------------------------
+    @author Keenan Staffieri
+    Header styles.
+    -------------------------------------------------------- */
+
+/**
+    .header-game
+*/
+.header-game {
+    position: relative;
+    height: 40px;
+    background-color: black;
+    border-bottom: 1px solid #1a1a1a;
+    box-shadow: 0 1px 4px black;
+    z-index: 100;
+}
+
+.header-game__title {
+    font-size: em(25px);
+    margin: 0;
+    cursor: default;
+}
+
+.header-game__leader-civ {
+    font-size: em(16px);
+}
+
+.header-game__next-tick {
+    color: $light-gray;
+    cursor: default;
+
+    span {
+        color: cyan;
+    }
+}
+
+.header-game__cur-tick, .header-game__cur-turn {
+    text-transform: uppercase;
+    cursor: default;
+}
+
+.header-game__options {
+    margin-top: 5px;
+
+    button {
+        padding: 3px 10px;
+    }
+}

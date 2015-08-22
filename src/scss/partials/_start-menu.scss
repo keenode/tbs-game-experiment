@@ -1,0 +1,61 @@
+/** --------------------------------------------------------
+    partials/_start-menu.scss
+    --------------------------------------------------------
+    @author Keenan Staffieri
+    Sidebar styles.
+    -------------------------------------------------------- */
+
+.start-menu__title {
+    text-align: center;
+    cursor: default;
+}
+
+.start-menu__welcome-msg {
+    p {
+        margin: 0;
+    }
+
+    small {
+        color: $gray;
+    }
+}
+
+.start-menu__options {
+    margin-top: 20px;
+
+    md-button {
+        display: block;
+    }
+}
+
+
+.start-menu__new-game {
+    min-width: 600px;
+
+    h3 {
+        font-size: em(16px);
+        margin: 0;
+        cursor: default;
+    }
+
+    h4 {
+        font-size: em(14px);
+        margin-bottom: 5px;
+        cursor: default;
+    }
+
+    p {
+        margin: 20px 0 5px 0;
+    }
+
+    input.rgb-value, input.num-ai-players {
+        color: white;
+        background: none;
+        border: 0;
+        padding-left: 10px;
+    }
+}
+
+.start-menu__world-size {
+    cursor: default;
+}

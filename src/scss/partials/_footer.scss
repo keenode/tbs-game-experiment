@@ -1,0 +1,24 @@
+/** --------------------------------------------------------
+    partials/_footer.scss
+    --------------------------------------------------------
+    @author Keenan Staffieri
+    Footer styles.
+    -------------------------------------------------------- */
+
+/**
+    .main-footer
+*/
+.main-footer {
+    background-color: black;
+}
+
+.main-footer__inner {
+    padding: 10px;
+}
+
+.main-footer__copyright {
+    display: block;
+    color: $color-blue-3;
+    font-size: em(10px);
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+/** --------------------------------------------------------
+	master.scss
+	--------------------------------------------------------
+	@author Keenan Staffieri
+	@version 0.3.0
+	@framework_version 0.3.1
+	Master file for all SCSS.
+	-------------------------------------------------------- */
+
+/**
+    BEM Techniques are used
+    https://bem.info/method/
+**/
+
+/** Bourbon Mixins **/
+@import "../bower_components/bourbon/dist/bourbon";
+
+/** Bourbon Neat Grid **/
+@import "../bower_components/neat/app/assets/stylesheets/neat";
+
+/** Angular Material **/
+@import "angular-material/angular-material";
+@import "angular-material/default-theme";
+
+/** Theme settings **/
+@import "theme_settings";
+@import "angular-material/theme-overrides";
+
+/** Import custom mixins **/
+@import "mixins/base";
+
+/** Grid settings **/
+@import "grid/base";
+
+/** Custom webfonts **/
+@import "fonts";
+
+/** Normalize CSS **/
+@import "normalize";
+
+/** Import theme styles **/
+@import "styles/base";
+
+/** Import component styles **/
+@import "components/base";
+
+/** Import partial templates **/
+@import "partials/base";
+
+/** Import template styles **/
+@import "templates/base";

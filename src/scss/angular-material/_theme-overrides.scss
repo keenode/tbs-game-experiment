@@ -1,0 +1,104 @@
+/** Buttons **/
+md-button.md-default-theme {
+    background-color: $color-teal-4;
+    margin-bottom: 15px;
+    border-radius: 0;
+    border: 2px solid $color-teal-3;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: background-color 200ms ease-out;
+
+    &:hover {
+        background-color: $color-teal-3 !important;
+    }
+}
+
+md-button.md-default-theme.md-primary {
+    color: $color-secondary;
+}
+
+/** Dialogs **/
+md-dialog.md-default-theme {
+    background-color: black;
+    border: 3px solid $color-teal-5;
+    box-shadow: 0 8px 32px black;
+    border-radius: 0;
+}
+
+md-content.md-default-theme {
+    background-color: black;
+}
+
+.md-subheader.md-default-theme {
+    background-color: black;
+}
+
+md-dialog.md-default-theme.md-content-overflow .md-actions {
+    height: 100px;
+    background-color: darken($color-teal-5, 10%);
+    border-top: 1px solid darken($color-teal-5, 5%);
+}
+
+/** Inputs **/
+md-input-group.md-default-theme input {
+    color: $color-secondary;
+    border-color: $color-teal-3;
+}
+
+md-input-group.md-default-theme label {
+    color: $gray;
+}
+
+md-input-group.md-default-theme.md-input-has-value:not(.md-input-focused) label {
+    color: $color-teal-2;
+}
+
+/** Radio Buttons **/
+md-radio-button.md-default-theme .md-off {
+    border-color: $gray;
+}
+
+/** Sliders **/
+md-slider .md-thumb:after {
+    background: $color-teal-5;
+    border-color: $color-teal-4;
+}
+
+md-slider[md-theme="red"] .md-thumb:after {
+    background: red;
+    border-color: darken(red, 10%);
+}
+
+md-slider[md-theme="green"] .md-thumb:after {
+    background: green;
+    border-color: darken(green, 10%);
+}
+
+md-slider[md-theme="blue"] .md-thumb:after {
+    background: blue;
+    border-color: darken(blue, 10%);
+}
+
+md-slider.md-default-theme .md-track-fill {
+    background-color: $color-secondary;
+}
+
+md-slider[md-theme="red"] .md-track-fill {
+    background-color: red;
+}
+
+md-slider[md-theme="green"] .md-track-fill {
+    background-color: green;
+}
+
+md-slider[md-theme="blue"] .md-track-fill {
+    background-color: blue;
+}
+
+md-slider .md-track-container {
+    background-color: $gray;
+}
+
+md-slider.md-default-theme .md-focus-ring {
+    border-color: white;
+}

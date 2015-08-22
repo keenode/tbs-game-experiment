@@ -1,0 +1,68 @@
+/** --------------------------------------------------------
+    templates/_index.scss
+    --------------------------------------------------------
+    @author Keenan Staffieri
+    Index page styles.
+    -------------------------------------------------------- */
+
+/**
+    .main-content
+    Content section of the index page.
+*/
+.main-content {
+    @include outer-container;
+    @include pad(1em);
+}
+
+.main-content__left {
+    @include span-columns(12);
+
+    @include media($tablet) {
+        @include span-columns(8);
+    }
+}
+
+.main-content__right {
+    @include span-columns(12);
+    @include omega();
+    margin-top: em(20);
+
+    @include media($tablet) {
+        @include span-columns(4);
+    }
+}
+
+.main-content h1, h4 {
+    cursor: default;
+}
+
+.main-content img {
+    width: 100%;
+}
+
+/**
+    .main-cols
+    Main columns of the index page.
+*/
+.main-cols {
+    @include outer-container;
+    @include pad(1em);
+}
+
+.main-cols__col {
+    @include span-columns(12);
+
+    @include media($tablet) {
+        @include span-columns(4);
+    }
+}
+
+.main-cols h3 {
+    color: $color-accent;
+    margin-bottom: 0.25em;
+    cursor: default;
+}
+
+.main-cols p {
+    font-size: em(14px);
+}

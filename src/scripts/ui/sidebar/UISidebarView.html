@@ -1,0 +1,91 @@
+<sidebar ng-controller="UISidebarController">
+
+    <!-- Resources Panel -->
+    <div class="resources">
+        <div layout="horizontal" layout-padding>
+            <div class="resources__item" flex="50">
+                <div class="resources__icon"></div>
+                <div class="resources__indicator" layout="horizontal" layout-align="center center">
+                    <span class="resources__count resources__count--food">{{ resources.food }}</span>
+                    <span class="resources__max">&nbsp;/&nbsp;{{ resources.maxFood }}</span>
+                </div>
+                <span class="resources__label">Food</span>
+            </div>
+            <div class="resources__item" flex="50">
+                <div class="resources__icon"></div>
+                <div class="resources__indicator" layout="horizontal" layout-align="center center">
+                    <span class="resources__count resources__count--carbon">{{ resources.carbon }}</span>
+                    <span class="resources__max">&nbsp;/&nbsp;{{ resources.maxCarbon }}</span>
+                </div>
+                <span class="resources__label">Carbon</span>
+            </div>
+        </div>
+        <div layout="horizontal" layout-padding>
+            <div class="resources__item" flex="50">
+                <div class="resources__icon"></div>
+                <div class="resources__indicator" layout="horizontal" layout-align="center center">
+                    <span class="resources__count resources__count--ore">{{ resources.ore }}</span>
+                    <span class="resources__max">&nbsp;/&nbsp;{{ resources.maxOre }}</span>
+                </div>
+                <span class="resources__label">Ore</span>
+            </div>
+            <div class="resources__item" flex="50">
+                <div class="resources__icon"></div>
+                <div class="resources__indicator" layout="horizontal" layout-align="center center">
+                    <span class="resources__count resources__count--energy">{{ resources.energy }}</span>
+                    <span class="resources__max">&nbsp;/&nbsp;{{ resources.maxEnergy }}</span>
+                </div>
+                <span class="resources__label">Energy</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Credits -->
+    <div class="credits-indicator" layout="horizontal" layout-align="center center" layout-padding>
+        <span class="credits-indicator__label">Credits:&nbsp;</span>
+        <span class="credits-indicator__total">
+            {{ credits }}
+            <span class="credits-indicator__revenue" ng-class="{green: revenue > 0, red: revenue < 0}">
+                <span class="plus" ng-show="revenue > 0">+</span>{{ revenue }}
+            </span>
+        </span>
+    </div>
+
+    <!-- Total Pop -->
+    <span class="total-population">Total Pop: {{ totalPopulation }}</span>
+
+    <!-- <hr>
+    <p>Happiness</p>
+    <p>Science</p>
+    <p>Influence</p>
+    <hr> -->
+
+    <!-- <h3>Advisors</h3> -->
+    <div class="accordian-item">
+        <div class="accordian-item__header">
+            <h3>Units <small class="accordian-item__indicator">{{ units.total }} / {{ units.max }}</small></h3>
+        </div>
+    </div>
+    <!-- <small>- Include expand button to bring this functionality to modal.</small>
+    <small>- Include filters to show military, civilian, naval, space units.</small>
+    <small>- Include autocomplete search to filter out units.. when clicked, you are taken to the unit.</small> -->
+    <!-- <h3>Research Tech</h3> -->
+    <!-- <h3>Government</h3> -->
+    <div class="accordian-item">
+        <div class="accordian-item__header">
+            <h3>Cities <small class="accordian-item__indicator">{{ cities.total }}</small></h3>
+        </div>
+    </div>
+    <!-- <h3>Planets</h3> -->
+    <div class="accordian-item">
+        <div class="accordian-item__header">
+            <h3>Structures <small class="accordian-item__indicator">{{ structures.total }}</small></h3>
+        </div>
+    </div>
+    <!-- <h3>Espionage</h3> -->
+    <div class="accordian-item">
+        <div class="accordian-item__header">
+            <h3>Starpedia</h3>
+        </div>
+    </div>
+</sidebar>

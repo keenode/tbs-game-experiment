@@ -1,0 +1,176 @@
+<md-dialog>
+
+    <md-content>
+        <h2 class="start-menu__title">{{ modalTitle }}</h2>
+        <hr>
+
+        <div ng-show="menuState === 'INITIAL'">
+            <div class="start-menu__welcome-msg">
+                <p class="center">Welcome to TBS Game! v0.1.0</p>
+                <p class="center"><small>This game is a work in progress by Keenan Staffieri.</small></p>
+                <p class="center"><small>-- <a href="http://keenanstaffieri.com" target="_blank">keenanstaffieri.com</a> --</small></p>
+            </div>
+
+            <div class="start-menu__options">
+                <md-button ng-click="newGame()">New Game</md-button>
+                <md-button ng-click="loadGame()">Load Game</md-button>
+            </div>
+
+            <ul>
+                <li>Share Facebook</li>
+                <li>Share Twitter</li>
+                <li>Share Google+</li>
+            </ul>
+        </div>
+
+        <div ng-show="menuState === 'NEW_GAME'">
+
+            <form class="start-menu__new-game">
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="50">
+                        <h3>Civilization Name</h3>
+                        <md-text-float label="Name (Noun)" ng-model="newGameObj.civ.name.noun"></md-text-float>
+                        <md-text-float label="Name (Pluarl)" ng-model="newGameObj.civ.name.pluarl"></md-text-float>
+                        <md-text-float label="Name (Adjective)" ng-model="newGameObj.civ.name.adjective"></md-text-float>
+                    </div>
+                    <div flex="50">
+                        <h3>Leader</h3>
+                        <md-text-float label="Name" ng-model="newGameObj.leader.name"></md-text-float>
+                        <p>Gender</p>
+                        <md-radio-group ng-model="newGameObj.leader.gender">
+                            <md-radio-button value="Male">Male</md-radio-button>
+                            <md-radio-button value="Female">Female</md-radio-button>
+                        </md-radio-group>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="100">
+                        <h3>Civilization Colors</h3>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="50">
+
+                        <h4>Primary</h4>
+                        <h3>
+                            <span style="display: block; height: 30px; border: 1px solid #333; background: rgb({{newGameObj.civ.color.primary.red}},{{newGameObj.civ.color.primary.green}},{{newGameObj.civ.color.primary.blue}})"></span>
+                        </h3>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>R</span>
+                            </div>
+                            <md-slider md-theme="red" flex min="0" max="255" ng-model="newGameObj.civ.color.primary.red" aria-label="red"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.primary.red" aria-label="red" aria-controls="red-slider">
+                            </div>
+                        </div>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>G</span>
+                            </div>
+                            <md-slider md-theme="green" flex ng-model="newGameObj.civ.color.primary.green" min="0" max="255" aria-label="green"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.primary.green" aria-label="green" aria-controls="green-slider">
+                            </div>
+                        </div>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>B</span>
+                            </div>
+                            <md-slider md-theme="blue" flex ng-model="newGameObj.civ.color.primary.blue" min="0" max="255" aria-label="blue"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.primary.blue" aria-label="blue" aria-controls="blue-slider">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div flex="50">
+                        <h4>Secondary</h4>
+
+                        <h3>
+                            <span style="display: block; height: 30px; border: 1px solid #333; background: rgb({{newGameObj.civ.color.secondary.red}},{{newGameObj.civ.color.secondary.green}},{{newGameObj.civ.color.secondary.blue}})"></span>
+                        </h3>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>R</span>
+                            </div>
+                            <md-slider md-theme="red" flex min="0" max="255" ng-model="newGameObj.civ.color.secondary.red" aria-label="red"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.secondary.red" aria-label="red" aria-controls="red-slider">
+                            </div>
+                        </div>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>G</span>
+                            </div>
+                            <md-slider md-theme="green" flex ng-model="newGameObj.civ.color.secondary.green" min="0" max="255" aria-label="green"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.secondary.green" aria-label="green" aria-controls="green-slider">
+                            </div>
+                        </div>
+
+                        <div layout>
+                            <div flex="10" layout layout-align="center center">
+                                <span>B</span>
+                            </div>
+                            <md-slider md-theme="blue" flex ng-model="newGameObj.civ.color.secondary.blue" min="0" max="255" aria-label="blue"></md-slider>
+                            <div flex="20" layout layout-align="center center">
+                                <input class="rgb-value" type="number" ng-model="newGameObj.civ.color.secondary.blue" aria-label="blue" aria-controls="blue-slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding style="padding-bottom: 0;">
+                    <div flex="100" style="padding-bottom: 0;">
+                        <h3>World Size</h3>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="80">
+                        <md-slider md-discrete ng-model="newGameObj.gameOptions.worldSize" step="1" min="0" max="4" aria-label="world size"></md-slider>
+                    </div>
+                    <div flex="20" layout="veritcal" layout-align="start center">
+                        <p class="start-menu__world-size">{{ worldSizes[newGameObj.gameOptions.worldSize] }}</p>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="100" style="padding-bottom: 0;">
+                        <h3># AI Players</h3>
+                    </div>
+                </div>
+
+                <div flex layout="horizontal" layout-padding>
+                    <div flex="80">
+                        <md-slider md-discrete ng-model="newGameObj.gameOptions.numAIPlayers" step="1" min="0" max="15" aria-label="# ai players"></md-slider>
+                    </div>
+                    <div flex="20" layout="veritcal" layout-align="center center">
+                        <input class="num-ai-players" style="padding-left: 0;" type="number" ng-model="newGameObj.gameOptions.numAIPlayers" aria-label="# ai players">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </md-content>
+
+    <div class="md-actions" layout="row" ng-show="menuState === 'NEW_GAME'">
+        <md-button ng-click="goBack()" class="no-margin">
+            Back
+        </md-button>
+        <span flex></span>
+        <md-button ng-click="startGame()" class="md-primary no-margin">
+            Start Game
+        </md-button>
+    </div>
+
+</md-dialog>

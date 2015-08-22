@@ -1,0 +1,14 @@
+/** --------------------------------------------------------
+    templates/_base.scss
+    --------------------------------------------------------
+    @author Keenan Staffieri
+    Import all custom template styles.
+    -------------------------------------------------------- */
+
+@import "404";
+@import "index";
+
+hr {
+    border-color: $color-teal-4;
+    margin: 20px 0;
+}

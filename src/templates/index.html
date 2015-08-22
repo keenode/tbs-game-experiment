@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="tbsGame">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <title>TBS Game</title>
+
+        <meta name="description" content="TBS game.">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+        <link href='http://fonts.googleapis.com/css?family=Monda:400,700|Play' rel='stylesheet' type='text/css'>
+
+        <!-- Stylesheets-->
+        <!-- inject:css -->
+        <!-- endinject -->
+    </head>
+    <body layout="vertical" layout-fill ng-controller="GameController">
+
+        <!-- Site Header -->
+        <ui-header></ui-header>
+
+        <div flex layout="vertical" layout-sm="horizontal">
+
+            <!-- Sidebar -->
+            <div class="sidebar-game" flex-sm="33" flex-md="20">
+                <ui-sidebar></ui-sidebar>
+            </div>
+
+            <main flex>
+                <!-- Game Renderer -->
+                <game-renderer></game-renderer>
+
+                <div class="notifications">
+                    Notifications box
+                    <small>-- includes filters for notifications &amp; chat messages.</small>
+                </div>
+            </main>
+
+            <md-sidenav component-id="right" class="md-sidenav-right">
+                Right Nav!
+            </md-sidenav>
+
+        </div>
+
+
+        <!-- Site Footer -->
+        <footer class="main-footer">
+            <div class="main-footer__inner">
+                <span class="main-footer__copyright">
+                    &copy; Copyright 2014 Keenan Staffieri.
+                </span>
+            </div>
+        </footer> <!-- .main-footer -->
+
+        <!-- Scripts -->
+        <!-- replace:js-cdn -->
+        <!-- inject:js -->
+        <!-- endinject -->
+    </body>
+</html>

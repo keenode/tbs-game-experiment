@@ -1,0 +1,25 @@
+<header class="header-game" ng-controller="UIHeaderController" layout="horizontal" layout-align="space-between center" layout-padding>
+    <h1 class="header-game__title" flex="20">TBS Game</h1>
+    <h4 class="header-game__leader-civ">{{ leaderName }} of {{ empireName }}</h4>
+    <!-- Include tick icon, symbol of timer -->
+    <!-- <div class="header-game__cur-tick">Tick {{ tick }}</div> -->
+    <div class="header-game__cur-turn">Turn {{ tick }}</div>
+    <!-- <div class="header-game__next-tick">Next tick in <span>{{ timeForNextTick }}</span></div> -->
+    <div class="header-game__options">
+        <md-button ng-click="save()">
+            <small>Save</small>
+        </md-button>
+        <md-button ng-click="saveAs()">
+            <small>Save As...</small>
+        </md-button>
+        <md-button ng-click="load()">
+            <small>Load</small>
+        </md-button>
+        <md-button ng-click="settings()">
+            <small>Settings</small>
+        </md-button>
+        <md-button ng-click="new()">
+            <small>New</small>
+        </md-button>
+    </div>
+</header>

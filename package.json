@@ -1,0 +1,47 @@
+{
+  "name": "tbs-game",
+  "version": "0.0.1",
+  "description": "Tick-based strategy game written in AngularJS.",
+  "main": "prod/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://keenan@bitbucket.org/keenan/tbs-game.git"
+  },
+  "keywords": [
+    "tbs game",
+    "strategy game",
+    "tick-based game"
+  ],
+  "author": {
+    "name": "Keenan Staffieri",
+    "email": "kstaffieri@gmail.com",
+    "url": "http://keenanstaffieri.com"
+  },
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/keenan/tbs-game",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-autoprefixer": "^1.0.0",
+    "gulp-concat": "^2.4.1",
+    "gulp-connect": "^2.0.6",
+    "gulp-filter": "^1.0.2",
+    "gulp-imagemin": "^1.0.1",
+    "gulp-inject": "^1.0.2",
+    "gulp-jshint": "^1.8.4",
+    "gulp-plumber": "^0.6.5",
+    "gulp-replace": "^0.4.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-ruby-sass": "^0.7.1",
+    "gulp-size": "^1.1.0",
+    "gulp-sourcemaps": "^1.2.2",
+    "gulp-strip-debug": "^1.0.1",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.1",
+    "jshint-stylish": "^1.0.0",
+    "require-dir": "^0.1.0",
+    "run-sequence": "^0.3.7"
+  }
+}
